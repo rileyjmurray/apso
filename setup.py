@@ -9,6 +9,8 @@ setuptools.setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
         'Natural Language :: English',
         'License :: OSI Approved :: Apache Software License',
         'Development Status :: 3 - alpha',
@@ -22,5 +24,6 @@ setuptools.setup(
                       "scipy >= 1.1",
                       "sageopt >= 0.5.3",
                       "matplotlib",
-                      "sympy"],
+                      "sympy",
+                      "pyomo"],
 )
