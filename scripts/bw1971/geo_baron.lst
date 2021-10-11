@@ -1,0 +1,339 @@
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/17/21 21:55:08 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.000 SECONDS      2 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/17/21 21:55:08 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Analysis      SOLVE GAMS_MODEL Using NLP From line 42
+
+
+**** Exec Error at line 27: power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0
+**** Exec Error at line 27: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 28: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 29: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 30: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 31: rPower: FUNC DOMAIN: x**y, x=0,y<0
+**** Exec Error at line 31: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 32: rPower: FUNC DOMAIN: x**y, x=0,y<0
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_6_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_6_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_7_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_7_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_3_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_4_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_4_
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/17/21 21:55:08 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE GAMS_MODEL Using NLP From line 42
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           6     SINGLE EQUATIONS            6
+BLOCKS OF VARIABLES           9     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            23     NON LINEAR N-Z             22
+CODE LENGTH                 169     CONSTANT POOL              59
+
+
+GENERATION TIME      =        0.003 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/17/21 21:55:08 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 42
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   GAMS_MODEL          OBJECTIVE  GAMS_OBJECTIVE
+     TYPE    NLP                 DIRECTION  MINIMIZE
+     SOLVER  BARON               FROM LINE  42
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      7 Feasible Solution         
+**** OBJECTIVE VALUE                1.7486
+
+ RESOURCE USAGE, LIMIT        163.390       500.000
+ ITERATION COUNT, LIMIT         0    2147483647
+ EVALUATION ERRORS              0             0
+
+GAMS/BARON       33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+
+BARON is a product of The Optimization Firm, LLC. http://www.minlp.com/
+Parts of the BARON software were created at the
+University of Illinois at Urbana-Champaign.
+
+*** This solver runs with a community license. No commercial use.
+
+===========================================================================
+ BARON version 20.10.16. Built: LNX-64 Fri Oct 16 09:51:40 EDT 2020
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: ILOG CPLEX                                      
+ For NLP: MINOS, SNOPT, GAMS external NLP, IPOPT, FILTERSD, FILTERSQP
+
+Solution      = 1.74859297176337  found at node 70205
+Best possible = -1E51
+Absolute gap  = 1E51  optca = 1E-9
+Relative gap  = NA  optcr = 0.0001
+  (Note that BARON uses a different formula to compute the relative gap as
+   was used for the above reported value.)
+
+
+                           LOWER          LEVEL          UPPER
+
+---- EQU eqs_1_            -1.0000        -1.0000        -1.0000      
+---- EQU eqs_2_            -1.0000        -1.0000        -1.0000      
+---- EQU eqs_3_            -1.0000        -1.0000        -1.0000      
+---- EQU eqs_4_            -1.0000        -1.0000        -1.0000      
+---- EQU eqs_5_            -1.0000        -1.0000        -1.0000      
+---- EQU f                   .              .              .          
+
+                           LOWER          LEVEL          UPPER
+
+---- VAR t_1_                .             0.6654        +INF         
+---- VAR t_5_                .             0.1873        +INF         
+---- VAR t_2_                .             1.6816        +INF         
+---- VAR t_6_                .             1.2374        +INF         
+---- VAR t_7_                .             2.9463        +INF         
+---- VAR t_0_                .             5.1605        +INF         
+---- VAR t_3_                .             7.4492        +INF         
+---- VAR t_4_                .             0.8830        +INF         
+---- VAR GAMS_OBJE~        -INF            1.7486        +INF         
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+                             0     ERRORS
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/17/21 21:55:08 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 42
+
+
+**** SOLVER STATUS FILE LISTED BELOW
+=0GAMS/BARON       33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+=C
+=CGAMS/BARON       33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+=C
+=CBARON is a product of The Optimization Firm, LLC. http://www.minlp.com/
+=CParts of the BARON software were created at the
+=CUniversity of Illinois at Urbana-Champaign.
+=C
+=C*** This solver runs with a community license. No commercial use.
+ /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/225a/sum.dat    = problem    5 8 367 50 -.100000000000E+52  1.74859297176     1 4 2 93205 70205 298 163.31 163.39   
+ skip       = 5
+ skip       = 8
+ skip       = 367
+ skip       = 50
+ zlbest     = -1E51
+ zub        = 1.74859297176
+ barstatus  = 1
+ modelstatus= 4
+ missingbnd = 2
+ itera      = 93205
+ nodeopt    = 70205
+ nodememmax = 298
+ totaltime  = 163.39
+=9_
+_2
+===========================================================================
+ BARON version 20.10.16. Built: LNX-64 Fri Oct 16 09:51:40 EDT 2020
+
+ BARON is a product of The Optimization Firm.
+ For information on BARON, see https://minlp.com/about-baron
+
+ If you use this software, please cite publications from
+ https://minlp.com/baron-publications, such as: 
+
+ Khajavirad, A. and N. V. Sahinidis,
+ A hybrid LP/NLP paradigm for global optimization relaxations,
+ Mathematical Programming Computation, 10, 383-421, 2018.
+_2
+===========================================================================
+ This BARON run may utilize the following subsolver(s)
+ For LP/MIP/QP: ILOG CPLEX                                      
+ For NLP: MINOS, SNOPT, GAMS external NLP, IPOPT, FILTERSD, FILTERSQP
+_2
+===========================================================================
+    The options used in solving the problem are as follows:
+       maxtime        =  0.5000E+03
+       maxiter        =      -1
+       numsol         =       1
+       firstfeas      =      -1
+       firstloc       =       F
+       cutoff         =  0.1000E+52
+       epsa           =  0.1000E-08
+       epsr           =  0.1000E-03
+       deltaterm      =       0
+       deltaa         =  0.1000E+52
+       deltar         =  0.1000E+01
+       deltat         = -0.1000E+03
+       boxtol         =  0.1000E-07
+       isoltol        =  0.1000E-03
+       absconfeastol  =  0.1000E-04
+       relconfeastol  =  0.0000E+00
+       absintfeastol  =  0.1000E-04
+       relintfeastol  =  0.0000E+00
+       results        =       1
+       summary        =       1
+       times          =       1
+       prtimefreq     =  0.3000E+02
+       prfreq         = 1000000
+       prlevel        =       1
+       numprint       =       8
+       numprintdual   =      -1
+       lpsol          =       3
+       nlpsol         =      -1
+       nlpsolstrat    =       0
+       allowminos     =       T
+       allowcplexnlp  =       F
+       allowsnopt     =       T
+       allowexternal  =       T
+       allowipopt     =       T
+       allowfiltersd  =       T
+       allowfiltersqp =       T
+       dolocal        =       1
+       numloc         =      20
+       locres         =       0
+       pdo            =      -2
+       brvarstra      =       0
+       brptstra       =       0
+       nodesel        =       0
+       compiis        =       0
+       iisint         =       1
+       iisorder       =      -1
+       threads        =       8
+_2
+===========================================================================
+ Doing local search
+ Solving bounding LP
+ Starting multi-start local search
+ Preprocessing found feasible solution with value  1.74859882949     
+ Done with local search
+_2
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+_2
+===========================================================================
+ User did not provide appropriate variable bounds. 
+ Some model expressions are unbounded.             
+ We may not be able to guarantee globality.        
+ Number of missing variable or expression bounds =     36
+ Number of variable or expression bounds autoset =     36
+_2
+===========================================================================
+          1             1             0.09   -0.238094E+09      1.74860    
+      20597           150            30.09    -2831.69          1.74860    
+      41146            87            60.09    -342.310          1.74859    
+      59673           143            90.09     1.64850          1.74859    
+      78869           260           120.09     1.71914          1.74859    
+      89778           183           150.09     1.73486          1.74859    
+      93205             0           163.40     1.74842          1.74859    
+
+ Cleaning up
+
+                         *** Normal completion ***            
+
+ Wall clock time:                   163.40
+ Total CPU time used:               163.31
+
+ Total no. of BaR iterations:   93205
+ Best solution found at node:   70205
+ Max. no. of nodes in memory:     298
+ 
+ All done
+_2
+===========================================================================
+_9=
+ reset missingbounds to 0
+=C
+=C===========================================================================
+=C BARON version 20.10.16. Built: LNX-64 Fri Oct 16 09:51:40 EDT 2020
+=C
+=C BARON is a product of The Optimization Firm.
+=C For information on BARON, see https://minlp.com/about-baron
+=C
+=C If you use this software, please cite publications from
+=C https://minlp.com/baron-publications, such as: 
+=C
+=C Khajavirad, A. and N. V. Sahinidis,
+=C A hybrid LP/NLP paradigm for global optimization relaxations,
+=C Mathematical Programming Computation, 10, 383-421, 2018.
+=C===========================================================================
+=C This BARON run may utilize the following subsolver(s)
+=C For LP/MIP/QP: ILOG CPLEX                                      
+=C For NLP: MINOS, SNOPT, GAMS external NLP, IPOPT, FILTERSD, FILTERSQP
+
+=C
+=CSolution      = 1.74859297176337  found at node 70205
+=CBest possible = -1E51
+=CAbsolute gap  = 1E51  optca = 1E-9
+=CRelative gap  = NA  optcr = 0.0001
+=C  (Note that BARON uses a different formula to compute the relative gap as
+=C   was used for the above reported value.)
+=C
+**** SOLVER STATUS FILE LISTED ABOVE
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/17/21 21:55:08 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =      163.423 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+
+
+USER: GAMS Community License for Riley Murray        G201229|0002AO-GEN
+      California Institute of Technology, USA                     CL736
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/apr6_geo.gams
+Output     /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/geo_baron.lst
+
+**** USER ERROR(S) ENCOUNTERED

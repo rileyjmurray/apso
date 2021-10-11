@@ -1,0 +1,196 @@
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 02:33:08 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.001 SECONDS      2 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 02:33:08 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Analysis      SOLVE GAMS_MODEL Using NLP From line 42
+
+
+**** Exec Error at line 27: power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0
+**** Exec Error at line 27: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 28: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 29: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 30: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 31: rPower: FUNC DOMAIN: x**y, x=0,y<0
+**** Exec Error at line 31: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 32: rPower: FUNC DOMAIN: x**y, x=0,y<0
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_6_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_6_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_7_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_7_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_3_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_4_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_4_
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 02:33:08 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE GAMS_MODEL Using NLP From line 42
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           6     SINGLE EQUATIONS            6
+BLOCKS OF VARIABLES           9     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            23     NON LINEAR N-Z             22
+CODE LENGTH                 169     CONSTANT POOL              59
+
+
+GENERATION TIME      =        0.002 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 02:33:08 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 42
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   GAMS_MODEL          OBJECTIVE  GAMS_OBJECTIVE
+     TYPE    NLP                 DIRECTION  MINIMIZE
+     SOLVER  SCIP                FROM LINE  42
+
+**** SOLVER STATUS     3 Resource Interrupt        
+**** MODEL STATUS      14 No Solution Returned     
+**** OBJECTIVE VALUE               NA
+
+ RESOURCE USAGE, LIMIT       7200.020      7200.000
+ ITERATION COUNT, LIMIT     10940    2147483647
+ EVALUATION ERRORS              0             0
+
+SCIP             33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+
+**** ERRORS/WARNINGS IN EQUATION eqs_1_
+     2 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+     2 error(s): power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0 (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_2_
+     8 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_3_
+     6 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_4_
+     4 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_5_
+     4 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+     1 warning(s): vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+     6 error(s): vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+
+**** ERRORS/WARNINGS IN EQUATION f
+     9 error(s): vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+     4 warning(s): vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+
+No solution returned
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 02:33:08 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 42
+
+
+**** SOLVER STATUS FILE LISTED BELOW
+=5 1 power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0 (RETURNED 1E299)
+=5 1 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 1 power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0 (RETURNED 1E299)
+=5 1 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=C
+=CSCIP             33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+=0SCIP             33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+SCIP version 7.0 (5b13bdabfb)
+Copyright (C) 2002-2020 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+**** SOLVER STATUS FILE LISTED ABOVE
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 02:33:08 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =     7200.215 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+
+
+USER: GAMS Community License for Riley Murray        G201229|0002AO-GEN
+      California Institute of Technology, USA                     CL736
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/apr6_geo.gams
+Output     /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/geo_scip.lst
+
+**** USER ERROR(S) ENCOUNTERED

@@ -1,0 +1,109 @@
+SCIP returns no solution or lower bound within 7200 seconds.
+
+Time to first nonnegative bound:
+    LINDO: 159s
+    BARON: 90.09s (*)
+    ANTIGONE: 5s (*)
+
+Total runtime:
+    LINDO: 1468s
+    BARON: 163.31s (*)
+    ANTIGONE: 145s (*)
+
+Final rigorous bounds:
+    LINDO: 1.74843143603
+    BARON: -inf
+    ANTIGONE: -1.688038
+
+
+Final bounds:
+    solver: ((rigor lower, likely lower), upper)
+    BARON: ((-inf, 1.74842), 1.74859),
+    LINDO: ( 1.74843143603,  1.74859883168),
+    ANTIGONE: ((-1.688038, 1.748), +1.748599)
+
+    BARON: (-inf, 1.74859),
+    LINDO: ( 1.74843143603,  1.74859883168),
+    ANTIGONE: (-1.688038, 1.748599)
+
+
+BARON
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+===========================================================================
+          1             1             0.09   -0.238094E+09      1.74860
+      20597           150            30.09    -2831.69          1.74860
+      41146            87            60.09    -342.310          1.74859
+      59673           143            90.09     1.64850          1.74859
+      78869           260           120.09     1.71914          1.74859
+      89778           183           150.09     1.73486          1.74859
+      93205             0           163.40     1.74842          1.74859
+ Wall clock time:                   163.40
+ Total CPU time used:               163.31
+===========================================================================
+Solution      = 1.74859297176337  found at node 70205
+Best possible = -1E51
+
+
+
+
+LINDO
+ #NODEs  BOXES   LOWER BOUND     UPPER BOUND      RGAP   TIME(s)
+     1       1  -1.000000e+30  1.748599e+00  1.0e+00      0 (*N)
+    31      20  -1.000000e+30  1.748599e+00  1.0e+00    120 (*I)
+    55      26  -1.000000e+30  1.748599e+00  1.0e+00    120 (*I)
+    63      28  -1.000000e+30  1.748599e+00  1.0e+00    121 (*I)
+   119      64  -1.000000e+30  1.748599e+00  1.0e+00    123 (*I)
+   135      76  -1.000000e+30  1.748599e+00  1.0e+00    124 (*I)
+   143      82  -2.505615e+10  1.748599e+00  1.0e+00    124 (*I)
+   151      86  -1.201801e+10  1.748599e+00  1.0e+00    124 (*I)
+   167      88  -5.924798e+09  1.748599e+00  1.0e+00    125 (*I)
+   183      94  -1.591311e+09  1.748599e+00  1.0e+00    125 (*I)
+   279     124  -7.070316e+05  1.748599e+00  1.0e+00    127 (*I)
+   807     174  -3.128493e+01  1.748599e+00  1.1e+00    136
+  1015     188  -2.254172e+00  1.748599e+00  1.8e+00    141 (*I)
+  1591     294  1.113902e+00  1.748599e+00  3.6e-01    159
+ 644023      0  1.748431e+00  1.748599e+00  9.6e-05   1468 (*F)
+Terminating global search ...
+ Global optimum found
+ Objective value              :          1.74859883168
+ Best Bound                   :          1.74843143603
+ Total time (sec.)            :                   1468
+
+
+
+
+
+ANTIGONE
+-------------------------------------------------------------------------------
+Time (s) Nodes explored Nodes remaining Best possible   Best found Relative Gap
+-------------------------------------------------------------------------------
+WARNING! Could not deterministically infer all bounds; ANTIGONE guessed some
+         bounds. Supply finite variable bounds to guarantee global optimality
+       0              1               1    -1.688e+00   +1.749e+00           --
+       5              1               2    +7.600e-02   +1.749e+00   +9.565e-01
+     135             35               6    +1.748e+00   +1.749e+00   +1.534e-04
+     140             35               6    +1.748e+00   +1.749e+00   +1.248e-04
+     145             40               0    -1.688e+00   +1.749e+00           --
+-------------------------------------------------------------------------------
+Termination Status : Found feasible point; guessed variable bounds
+Best Feasible Point: +1.748599e+00
+Best Possible Point: -1.688038e+00 (+1.748e+00 if ANTIGONE bounds reasonable)
+       Relative Gap: +1.965366e+00
+-------------------------------------------------------------------------------
+
+
+
+
+SCIP
+******************************************************************************
+ time | node  | left  |LP iter|LP it/n|mem/heur|mdpt |extbr|vars |cons |cuts |sepa|confs|strbr|  dualbound   | primalbound  |  gap   | compl.
+  0.2s|     1 |     2 |    82 |     - |   930k |   0 |  26 |  31 |  28 |  51 |  0 |   0 |   0 |      --      |      --      |    Inf | unknown
+Starting spatial branch-and-bound on unbounded variable <nlreform20> ([0,1e+20]) - cannot guarantee finite termination.
+  0.4s|   100 |    95 |  5746 |  57.5 |  1032k |  96 |  20 |  31 |  28 |5427 |  0 |   0 |   0 |      --      |      --      |    Inf |   4.10%
+SCIP Status        : solving was interrupted [time limit reached]
+Solving Time (sec) : 7200.02
+Solving Nodes      : 189
+Primal Bound       : +1.00000000000000e+20 (0 solutions)
+Dual Bound         : -1.00000000000000e+20
+Gap                : infinite

@@ -1,0 +1,74 @@
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 08:11:24 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.000 SECONDS      2 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 08:11:24 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE GAMS_MODEL Using NLP From line 40
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           6     SINGLE EQUATIONS            6
+BLOCKS OF VARIABLES           9     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            23     NON LINEAR N-Z             22
+CODE LENGTH                 142     CONSTANT POOL              58
+
+
+GENERATION TIME      =        0.002 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 08:11:24 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 40
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   GAMS_MODEL          OBJECTIVE  GAMS_OBJECTIVE
+     TYPE    NLP                 DIRECTION  MINIMIZE
+     SOLVER  SCIP                FROM LINE  40
+
+**** SOLVER STATUS     3 Resource Interrupt        
+**** MODEL STATUS      14 No Solution Returned     
+**** OBJECTIVE VALUE               NA
+
+ RESOURCE USAGE, LIMIT       7200.019      7200.000
+ ITERATION COUNT, LIMIT     12235    2147483647
+ EVALUATION ERRORS              0             0
+
+SCIP             33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+
+No solution returned
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 08:11:24 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 40
+
+
+**** SOLVER STATUS FILE LISTED BELOW
+=C
+=CSCIP             33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+=0SCIP             33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+SCIP version 7.0 (5b13bdabfb)
+Copyright (C) 2002-2020 Konrad-Zuse-Zentrum fuer Informationstechnik Berlin (ZIB)
+
+**** SOLVER STATUS FILE LISTED ABOVE
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 08:11:24 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =     7200.202 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+
+
+USER: GAMS Community License for Riley Murray        G201229|0002AO-GEN
+      California Institute of Technology, USA                     CL736
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/apr6_exp.gams
+Output     /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/exp_scip.lst

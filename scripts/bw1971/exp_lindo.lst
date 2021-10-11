@@ -1,0 +1,209 @@
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 02:22:47 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.001 SECONDS      2 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 02:22:47 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE GAMS_MODEL Using NLP From line 40
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           6     SINGLE EQUATIONS            6
+BLOCKS OF VARIABLES           9     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            23     NON LINEAR N-Z             22
+CODE LENGTH                 142     CONSTANT POOL              58
+
+
+GENERATION TIME      =        0.002 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 02:22:47 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 40
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   GAMS_MODEL          OBJECTIVE  GAMS_OBJECTIVE
+     TYPE    NLP                 DIRECTION  MINIMIZE
+     SOLVER  LINDO               FROM LINE  40
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      1 Optimal                   
+**** OBJECTIVE VALUE                1.7486
+
+ RESOURCE USAGE, LIMIT         50.537      7200.000
+ ITERATION COUNT, LIMIT    508626    2147483647
+ EVALUATION ERRORS             NA             0
+
+LINDO            33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+
+   LINDO Driver
+   Lindo Systems Inc, www.lindo.com
+
+*** This solver runs with a community license. No commercial use.
+Lindo API version 12.0.3977.210 built on Sep 28 2020 22:11:12
+
+Solution      = 1.74859882948945
+Best possible = 1.74859882958945
+Absolute gap  = -1.00000008274037E-10  (OptCA = 0)
+Relative gap  = -0.00000  (OptCR = 0.0001)
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU eqs_1_            -1.0000        -1.0000        -1.0000         0.9567      
+---- EQU eqs_2_            -1.0000        -1.0000        -1.0000         0.3255      
+---- EQU eqs_3_            -1.0000        -1.0000        -1.0000         0.1277      
+---- EQU eqs_4_            -1.0000        -1.0000        -1.0000         1.5373      
+---- EQU eqs_5_            -1.0000        -1.0000        -1.0000         0.3255      
+---- EQU f                   .              .              .             1.0000      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR GAMS_OBJE~        -INF            1.7486        +INF             .          
+---- VAR x_1_              -INF           -0.4081        +INF      -1.167349E-8      
+---- VAR x_5_              -INF           -1.6738        +INF             .          
+---- VAR x_2_              -INF            0.5272        +INF             .          
+---- VAR x_6_              -INF            0.2159        +INF             .          
+---- VAR x_7_              -INF            1.0738        +INF             .          
+---- VAR x_0_              -INF            1.6397        +INF             .          
+---- VAR x_3_              -INF            2.0061        +INF             .          
+---- VAR x_4_              -INF           -0.1278        +INF             .          
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+                             0     ERRORS
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 02:22:47 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 40
+
+
+**** SOLVER STATUS FILE LISTED BELOW
+=C
+=CLINDO            33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+=0LINDO            33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+=C
+=C   LINDO Driver
+=C   Lindo Systems Inc, www.lindo.com
+=C
+=C*** This solver runs with a community license. No commercial use.
+=CLindo API version 12.0.3977.210 built on Sep 28 2020 22:11:12
+Barrier Solver Version 8.1.0.081, Nonlinear Solver Version 3.17L
+Platform Linux 64x86 (D)
+
+
+Number of constraints:       5    le:       0, ge:       0, eq:       5, rn:       0 (ne:0)
+Number of variables  :       8    lb:       0, ub:       0, fr:       8, bx:       0 (fx:0)
+Number of nonzeroes  :      15    density:  0.0037(%)     , sb:       0
+
+Abs. Ranges     :         Min.          Max.    Condition.
+Matrix Coef. (A):   1.0000e+30       0.00000       0.00000 
+Obj. Vector  (c):  1.0000e-100   1.0000e-100       1.00000 
+RHS Vector   (b):  1.0000e-100   1.0000e-100       1.00000 
+Lower Bounds (l):  1.0000e-100   1.0000e-100       1.00000 
+Upper Bounds (u):   1.0000e+30    1.0000e+30       1.00000 
+BadScale Measure: 0
+
+Nonlinear variables  :       8
+Nonlinear constraints:       6
+Nonlinear nonzeroes  :      15+7
+
+Start LSsolveGOP
+
+Starting global optimization ...
+
+Number of Threads: 8
+
+Number of nonlinear functions/operators:  1
+ EP_EXP 
+
+Starting GOP presolve ...
+First Call Local Solver
+Find local solution, objvalue =       1.7486
+
+Computing reduced bound...
+Searching for a better solution...
+
+Starting Main Loop...
+
+
+ #NODEs  BOXES   LOWER BOUND     UPPER BOUND      RGAP   TIME(s)
+
+     1       1  -1.000000e+30  1.748599e+00  1.0e+00      0 (*N) 
+    15       8  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I) 
+    23      10  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I) 
+    55      20  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I) 
+    63      18  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I) 
+    95      32  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I) 
+   223      90  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I) 
+   775     360  -1.000000e+30  1.748599e+00  1.0e+00      1 (*I) 
+   791     360  -1.000000e+30  1.748599e+00  1.0e+00      1 (*I) 
+   807     354  -1.000000e+30  1.748599e+00  1.0e+00      1 (*I) 
+   887     374  -1.000000e+30  1.748599e+00  1.0e+00      1 (*I) 
+   911     380  -1.000000e+30  1.748599e+00  1.0e+00      1 (*I) 
+  1607     556  -1.000000e+30  1.748599e+00  1.0e+00      3  
+  2407     688  -1.000000e+30  1.748599e+00  1.0e+00      5  
+  2983     766  -1.000000e+30  1.748599e+00  1.0e+00      6 (*I) 
+  2999     770  -1.000000e+30  1.748599e+00  1.0e+00      7 (*I) 
+  3207     866  -1.000000e+30  1.748599e+00  1.0e+00     11  
+  4007    1168  -1.000000e+30  1.748599e+00  1.0e+00     23  
+  4303    1288  -1.000000e+30  1.748599e+00  1.0e+00     25 (*I) 
+  4807    1486  -9.434314e+29  1.748599e+00  1.0e+00     29  
+  5607    2030  -6.338507e+29  1.748599e+00  1.0e+00     36  
+  6407    2114  -4.705165e+29  1.748599e+00  1.0e+00     41  
+  7207    1642  -4.082563e+29  1.748599e+00  1.0e+00     42  
+  8007    1626  -2.417116e+29  1.748599e+00  1.0e+00     46  
+  8807    1010  -1.265604e+29  1.748599e+00  1.0e+00     49  
+  9607     260  -4.018945e+28  1.748599e+00  1.0e+00     50  
+  9865       0  1.748599e+00  1.748599e+00  5.7e-11     50 (*F) 
+
+
+Terminating global search ...
+
+
+
+ Global optimum found
+ Objective value              :          1.74859882949
+ Best Bound                   :          1.74859882959
+ Factors (ok,stb)             :                  91996 (99.99,99.99)
+ Simplex iterations           :                 139396
+ Barrier iterations           :                      0
+ Nonlinear iterations         :                 369230
+ Box iterations               :                   9865
+ Total number of boxes        :                   9865
+ Max. Depth                   :                   2160
+ First solution time (sec.)   :                      0
+ Best solution time (sec.)    :                      0
+ Total time (sec.)            :                     50
+ 
+
+=C
+=CSolution      = 1.74859882948945
+=CBest possible = 1.74859882958945
+=CAbsolute gap  = -1.00000008274037E-10  (OptCA = 0)
+=CRelative gap  = -0.00000  (OptCR = 0.0001)
+=C
+**** SOLVER STATUS FILE LISTED ABOVE
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/22/21 02:22:47 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =       50.648 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+
+
+USER: GAMS Community License for Riley Murray        G201229|0002AO-GEN
+      California Institute of Technology, USA                     CL736
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/apr6_exp.gams
+Output     /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/exp_lindo.lst

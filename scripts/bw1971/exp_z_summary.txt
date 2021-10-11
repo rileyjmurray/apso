@@ -1,0 +1,63 @@
+SCIP returns no solution or lower bound within 7200 seconds.
+
+BARON
+
+
+BARON
+===========================================================================
+  Iteration    Open nodes         Time (s)    Lower bound      Upper bound
+===========================================================================
+          1             1             0.09   -0.234335E+10      1.74860
+      20722           312            30.04   -0.753206E+09      1.74860
+    4811712         88738          7188.78   -0.481411E+09      1.74860
+    4818913         88873          7200.00   -0.481206E+09      1.74860
+                    *** Max. allowable time exceeded ***
+ Wall clock time:                  7219.43
+ Total CPU time used:              7200.00
+ Total no. of BaR iterations: 4818913
+ Best solution found at node:    1790
+ Max. no. of nodes in memory:   88878
+
+ All done
+===========================================================================
+Solution      = 1.74859877383788  found at node 1790
+Best possible = -1E51
+Absolute gap  = 1E51  optca = 1E-9
+Relative gap  = NA  optcr = 0.0001
+
+
+
+
+LINDO            33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux
+Starting Main Loop...
+ #NODEs  BOXES   LOWER BOUND     UPPER BOUND      RGAP   TIME(s)
+     1       1  -1.000000e+30  1.748599e+00  1.0e+00      0 (*N)
+    15       8  -1.000000e+30  1.748599e+00  1.0e+00      0 (*I)
+
+  8807    1010  -1.265604e+29  1.748599e+00  1.0e+00     49
+  9607     260  -4.018945e+28  1.748599e+00  1.0e+00     50
+  9865       0  1.748599e+00  1.748599e+00  5.7e-11     50 (*F)
+Terminating global search ...
+ Global optimum found
+ Objective value              :          1.74859882949
+ Best Bound                   :          1.74859882959
+ Total time (sec.)            :                     50
+
+Solution      = 1.74859882948945
+Best possible = 1.74859882958945
+
+
+
+
+ANTIGONE
+-------------------------------------------------------------------------------
+Time (s) Nodes explored Nodes remaining Best possible   Best found Relative Gap
+-------------------------------------------------------------------------------
+WARNING! Could not deterministically infer all bounds; ANTIGONE guessed some
+         bounds. Supply finite variable bounds to guarantee global optimality
+       0              1               1            --   +1.749e+00           --
+       5           2540            2047            --   +1.749e+00           --
+      10           8966            7830            --   +1.749e+00           --
+*** Error: Could not spawn gamscmex, rc = 4
+           Cmex executable : /home/riley/gams/gams33.2_linux_x64_64_sfx/gamscmex.out
+           System directory: /home/riley/gams/gams33.2_linux_x64_64_sfx

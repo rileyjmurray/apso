@@ -1,0 +1,1024 @@
+CS options
+	MF (approximately smallest chordal extension)
+	NC (no chordal extension)
+	false (no correlative sparsity)
+TS options:
+	block (maximal chordal extension)
+	MD (approximately smallest chordal extension)
+	false (no term sparsity)
+order:
+	d (relaxation order)
+	min (lowest relaxation order for each variable clique)
+
+------------------------------------------------------------
+CS-TSSOS, d = 4
+
+(MF, block)
+	unknown - slow progress (metrics look good? objective looks bad?)
+	655.95
+(MF, MD)
+	unknown - slow progress (metrics good, objective good)
+(NC, block)
+	unknown - slow progress (metrics good, objective bad)
+(NC, MD)
+	unknown - slow progress (metrics good, objective good)
+
+---------------------------------------------------------------
+TSSOS, d = 4
+MD
+	Unknown - slow progress, metrics look not great
+block
+	SDP solving time: 625.99410891 seconds.
+	optimum = 22.834977590099307
+
+----------------------------------------------------
+TSSOS, d = 4, block, solution=true
+	Optimizer terminated. Time: 566.89  
+
+	SDP solving time: 567.417565823 seconds.
+	termination status: SLOW_PROGRESS
+	solution status: FEASIBLE_POINT
+	optimum = 22.834976693239877
+	Global optimality certified!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+julia> opt, sol, data = cs_tssos_first(pop, t, 4, numeq=1, CS="MF", TS="block")
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[8, 7]
+[1, 1]
+------------------------------------------------------
+Obtained the variable cliques in 0.000319619 seconds. The maximal size of cliques is 8.
+Starting to compute the block structure...
+Obtained the block structure in 0.220928832 seconds. The maximal size of blocks is 403.
+Assembling the SDP...
+There are 16294 affine constraints.
+SDP assembling time: 0.600190349 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 16294           
+  Cones                  : 0               
+  Scalar variables       : 10603           
+  Matrix variables       : 64              
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.01    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 16294           
+  Cones                  : 0               
+  Scalar variables       : 10603           
+  Matrix variables       : 64              
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 16294
+Optimizer  - Cones                  : 39
+Optimizer  - Scalar variables       : 3360              conic                  : 3102            
+Optimizer  - Semi-definite variables: 26                scalarized             : 256368          
+Factor     - setup time             : 13.89             dense det. time        : 0.00            
+Factor     - ML order time          : 2.36              GP order time          : 0.00            
+Factor     - nonzeros before factor : 9.87e+07          after factor           : 9.87e+07        
+Factor     - dense dim.             : 2                 flops                  : 8.11e+11        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   2.0e+00  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  14.24 
+1   1.6e+00  8.2e-01  8.3e-01  -3.18e-01  8.940394304e-02   1.034988653e-02   8.2e-01  36.48 
+2   8.0e-01  4.0e-01  5.9e-01  -9.77e-01  1.256261870e+00   5.527554389e-02   4.0e-01  59.19 
+3   4.3e-01  2.2e-01  4.3e-01  -9.73e-01  3.119211545e+00   5.763533346e-02   2.2e-01  81.96 
+4   1.9e-01  9.7e-02  2.9e-01  -9.86e-01  8.112327969e+00   7.335469668e-02   9.7e-02  104.84
+5   7.3e-02  3.6e-02  1.8e-01  -9.91e-01  2.306903615e+01   2.349826636e-01   3.6e-02  127.53
+6   1.6e-02  8.2e-03  8.3e-02  -9.93e-01  1.030287141e+02   1.624739273e+00   8.2e-03  150.33
+7   2.3e-03  1.1e-03  3.0e-02  -9.87e-01  7.106210311e+02   2.220018527e+01   1.1e-03  174.09
+8   4.5e-04  2.3e-04  1.2e-02  -9.37e-01  2.935158611e+03   1.386004412e+02   2.3e-04  197.23
+9   5.7e-05  2.8e-05  2.1e-03  -6.11e-01  6.103315460e+03   5.240192979e+02   2.8e-05  220.11
+10  1.9e-05  9.4e-06  3.1e-04  7.03e-01   1.714113305e+03   6.182795364e+02   9.4e-06  242.30
+11  2.7e-06  1.3e-06  1.2e-05  1.05e+00   7.040794358e+02   6.257802172e+02   1.3e-06  265.85
+12  4.8e-07  2.4e-07  1.1e-06  1.19e+00   5.912597091e+02   5.703110722e+02   2.4e-07  288.28
+13  4.0e-07  4.3e-08  6.7e-08  1.09e+00   4.471663556e+02   4.446843266e+02   4.1e-08  310.73
+14  9.1e-08  5.8e-09  3.4e-09  1.01e+00   3.415856306e+02   3.412228366e+02   5.4e-09  398.80
+15  6.8e-08  4.4e-09  2.2e-09  1.00e+00   3.266269790e+02   3.263552343e+02   4.1e-09  442.69
+16  5.3e-08  3.6e-09  1.4e-09  1.00e+00   3.132793646e+02   3.130799929e+02   3.0e-09  467.01
+17  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.105797500e+02   3.103952839e+02   2.7e-09  490.35
+18  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.105797500e+02   3.103952839e+02   2.7e-09  514.19
+19  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.104656404e+02   3.102831377e+02   2.7e-09  537.49
+20  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.104373297e+02   3.102553127e+02   2.7e-09  560.91
+21  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.104302652e+02   3.102483693e+02   2.7e-09  584.57
+22  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.104284999e+02   3.102466343e+02   2.7e-09  608.20
+23  4.8e-08  3.2e-09  1.2e-09  1.00e+00   3.104284999e+02   3.102466343e+02   2.7e-09  631.78
+Optimizer terminated. Time: 655.95  
+
+SDP solving time: 656.451268701 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = 310.4284998507308
+
+
+
+=======================================
+julia> opt, sol, data = cs_tssos_first(pop, t, 4, numeq=1, CS="MF", TS="MD")
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[8, 7]
+[1, 1]
+------------------------------------------------------
+Obtained the variable cliques in 0.000317308 seconds. The maximal size of cliques is 8.
+Starting to compute the block structure...
+Obtained the block structure in 0.267868526 seconds. The maximal size of blocks is 45.
+Assembling the SDP...
+There are 2774 affine constraints.
+SDP assembling time: 0.072149869 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2774            
+  Cones                  : 0               
+  Scalar variables       : 1838            
+  Matrix variables       : 1263            
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 185
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2774            
+  Cones                  : 0               
+  Scalar variables       : 1838            
+  Matrix variables       : 1263            
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 2535
+Optimizer  - Cones                  : 299
+Optimizer  - Scalar variables       : 1232              conic                  : 1017            
+Optimizer  - Semi-definite variables: 965               scalarized             : 27058           
+Factor     - setup time             : 0.06              dense det. time        : 0.00            
+Factor     - ML order time          : 0.02              GP order time          : 0.00            
+Factor     - nonzeros before factor : 4.03e+05          after factor           : 6.50e+05        
+Factor     - dense dim.             : 0                 flops                  : 2.31e+08        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   4.1e+01  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  0.08  
+1   3.7e+01  9.0e-01  8.7e-01  2.01e-01   5.158337579e-02   4.947411060e-02   9.0e-01  0.18  
+2   3.0e+01  7.4e-01  8.9e-01  -8.88e-01  5.794355910e-01   2.142163112e-01   7.4e-01  0.28  
+3   2.0e+01  5.0e-01  6.5e-01  -8.94e-01  1.008707398e+00   2.528050697e-01   5.0e-01  0.38  
+4   9.4e+00  2.3e-01  4.5e-01  -9.67e-01  3.242627163e+00   4.062266002e-01   2.3e-01  0.47  
+5   5.8e+00  1.4e-01  3.5e-01  -9.91e-01  5.623237625e+00   3.768217366e-01   1.4e-01  0.57  
+6   2.7e+00  6.5e-02  2.4e-01  -9.94e-01  1.305095718e+01   4.561590666e-01   6.5e-02  0.66  
+7   1.7e+00  4.0e-02  1.9e-01  -9.94e-01  2.123095800e+01   5.704619086e-01   4.0e-02  0.76  
+8   6.8e-01  1.7e-02  1.2e-01  -9.92e-01  5.185031470e+01   1.193437644e+00   1.7e-02  0.85  
+9   2.9e-01  7.1e-03  7.8e-02  -9.83e-01  1.210696081e+02   3.794424630e+00   7.1e-03  0.95  
+10  1.7e-01  4.1e-03  5.8e-02  -9.72e-01  2.125222270e+02   1.070943782e+01   4.1e-03  1.04  
+11  8.9e-02  2.2e-03  4.1e-02  -9.49e-01  3.889231668e+02   3.159066167e+01   2.2e-03  1.14  
+12  4.5e-02  1.1e-03  2.8e-02  -8.95e-01  7.110488492e+02   8.479496899e+01   1.1e-03  1.23  
+13  9.9e-03  2.4e-04  9.5e-03  -7.66e-01  1.906137349e+03   3.638826472e+02   2.4e-04  1.33  
+14  2.7e-03  6.5e-05  1.9e-03  -2.75e-02  1.485263393e+03   6.450501995e+02   6.5e-05  1.44  
+15  6.7e-04  1.6e-05  2.2e-04  7.26e-01   9.056767068e+02   7.338410257e+02   1.6e-05  1.55  
+16  7.0e-05  1.7e-06  7.0e-06  1.02e+00   7.342655517e+02   7.172380200e+02   1.7e-06  1.66  
+17  6.9e-06  1.7e-07  2.0e-07  1.07e+00   5.110100769e+02   5.095608031e+02   1.7e-07  1.77  
+18  2.4e-06  5.8e-08  4.4e-08  1.01e+00   1.042691564e+02   1.037145678e+02   5.8e-08  1.88  
+19  9.5e-07  2.3e-08  1.1e-08  9.90e-01   -1.956296955e+02  -1.958584045e+02  2.3e-08  1.99  
+20  8.6e-07  1.5e-08  5.6e-09  1.00e+00   -2.885405119e+02  -2.886883381e+02  1.4e-08  2.13  
+21  8.6e-07  1.5e-08  5.6e-09  1.00e+00   -2.885405119e+02  -2.886883381e+02  1.4e-08  2.31  
+22  8.6e-07  1.5e-08  5.6e-09  1.00e+00   -2.885405119e+02  -2.886883381e+02  1.4e-08  2.48  
+Optimizer terminated. Time: 2.66    
+
+SDP solving time: 3.177032543 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = -288.5405119032613
+
+=========================================================
+
+julia> opt, sol, data = cs_tssos_first(pop, t, 4, numeq=1, CS="NC", TS="block")
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[6, 5]
+[4, 4]
+------------------------------------------------------
+Obtained the variable cliques in 0.000215251 seconds. The maximal size of cliques is 6.
+Starting to compute the block structure...
+Obtained the block structure in 0.110129723 seconds. The maximal size of blocks is 210.
+Assembling the SDP...
+There are 8757 affine constraints.
+SDP assembling time: 0.140238303 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 8757            
+  Cones                  : 0               
+  Scalar variables       : 2109            
+  Matrix variables       : 144             
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 1
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 8757            
+  Cones                  : 0               
+  Scalar variables       : 2109            
+  Matrix variables       : 144             
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 8756
+Optimizer  - Cones                  : 81
+Optimizer  - Scalar variables       : 1255              conic                  : 1097            
+Optimizer  - Semi-definite variables: 64                scalarized             : 105955          
+Factor     - setup time             : 1.58              dense det. time        : 0.00            
+Factor     - ML order time          : 0.25              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.43e+07          after factor           : 1.87e+07        
+Factor     - dense dim.             : 2                 flops                  : 5.26e+10        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   8.0e+00  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  1.65  
+1   6.5e+00  8.2e-01  8.2e-01  -4.94e-01  2.611349589e-02   -6.036145538e-02  8.2e-01  3.73  
+2   3.0e+00  3.8e-01  5.8e-01  -9.48e-01  1.580680605e+00   2.192010422e-01   3.8e-01  5.76  
+3   9.4e-01  1.2e-01  3.2e-01  -9.54e-01  6.778193804e+00   3.692452000e-01   1.2e-01  7.79  
+4   2.6e-01  3.2e-02  1.6e-01  -9.86e-01  2.552251691e+01   4.919202180e-01   3.2e-02  9.89  
+5   4.2e-02  5.2e-03  6.5e-02  -9.93e-01  1.569475448e+02   2.000254759e+00   5.2e-03  12.15 
+6   2.0e-02  2.5e-03  4.5e-02  -9.91e-01  3.236985105e+02   3.336121141e+00   2.5e-03  14.19 
+7   2.9e-03  3.6e-04  1.7e-02  -9.89e-01  2.167189829e+03   2.132264127e+01   3.6e-04  16.46 
+8   2.6e-03  3.3e-04  1.6e-02  -9.55e-01  2.381401191e+03   2.405982066e+01   3.3e-04  18.55 
+9   1.9e-03  2.4e-04  1.3e-02  -9.49e-01  3.227465026e+03   3.500625745e+01   2.4e-04  20.55 
+10  2.4e-04  3.0e-05  4.0e-03  -9.27e-01  1.778512290e+04   2.543792600e+02   3.0e-05  22.78 
+11  2.1e-05  2.6e-06  3.7e-04  -3.80e-01  1.979498366e+04   7.381947076e+02   2.6e-06  25.03 
+12  3.0e-06  3.7e-07  5.9e-06  1.06e+00   9.832785428e+02   7.260910675e+02   3.7e-07  27.31 
+13  7.9e-07  9.9e-08  1.2e-06  1.19e+00   8.312797102e+02   6.884286723e+02   9.9e-08  29.36 
+14  9.8e-08  4.8e-09  1.4e-08  1.03e+00   6.596405373e+02   6.499481643e+02   5.0e-09  31.59 
+15  4.7e-08  4.3e-09  8.7e-10  1.00e+00   3.949165481e+02   3.934493083e+02   7.6e-10  33.82 
+16  3.8e-08  5.0e-09  5.6e-10  1.00e+00   3.751707508e+02   3.740819265e+02   5.6e-10  45.88 
+17  3.8e-08  5.0e-09  5.6e-10  1.00e+00   3.751707508e+02   3.740819265e+02   5.6e-10  48.22 
+18  3.8e-08  5.0e-09  5.6e-10  1.00e+00   3.751707508e+02   3.740819265e+02   5.6e-10  50.63 
+Optimizer terminated. Time: 53.03   
+
+SDP solving time: 53.273319957 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = 375.1707507981293
+
+===================================================================
+
+julia> opt, sol, data = cs_tssos_first(pop, t, 4, numeq=1, CS="NC", TS="MD")
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[6, 5]
+[4, 4]
+------------------------------------------------------
+Obtained the variable cliques in 0.000241455 seconds. The maximal size of cliques is 6.
+Starting to compute the block structure...
+Obtained the block structure in 0.112462736 seconds. The maximal size of blocks is 28.
+Assembling the SDP...
+There are 1497 affine constraints.
+SDP assembling time: 0.025620042 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 1497            
+  Cones                  : 0               
+  Scalar variables       : 639             
+  Matrix variables       : 758             
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 79
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 1497            
+  Cones                  : 0               
+  Scalar variables       : 639             
+  Matrix variables       : 758             
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 1391
+Optimizer  - Cones                  : 203
+Optimizer  - Scalar variables       : 792               conic                  : 654             
+Optimizer  - Semi-definite variables: 556               scalarized             : 14947           
+Factor     - setup time             : 0.02              dense det. time        : 0.00            
+Factor     - ML order time          : 0.01              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.37e+05          after factor           : 2.07e+05        
+Factor     - dense dim.             : 0                 flops                  : 4.69e+07        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   3.4e+01  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  0.03  
+1   2.9e+01  8.5e-01  8.3e-01  -3.37e-01  -4.189556627e-02  -8.209216474e-02  8.5e-01  0.07  
+2   2.0e+01  6.0e-01  8.1e-01  -8.08e-01  1.487874189e+00   8.006381663e-01   6.0e-01  0.11  
+3   1.1e+01  3.2e-01  4.9e-01  -8.71e-01  1.821794777e+00   3.249583686e-01   3.2e-01  0.15  
+4   4.7e+00  1.4e-01  3.3e-01  -9.81e-01  4.961636210e+00   2.869563723e-01   1.4e-01  0.19  
+5   1.3e+00  3.8e-02  1.7e-01  -9.92e-01  1.953750231e+01   2.858848529e-01   3.8e-02  0.23  
+6   6.0e-01  1.8e-02  1.2e-01  -9.95e-01  4.311735094e+01   2.831370642e-01   1.8e-02  0.27  
+7   2.4e-01  7.2e-03  7.4e-02  -9.94e-01  1.058873759e+02   3.245093382e-01   7.2e-03  0.31  
+8   8.2e-02  2.4e-03  4.3e-02  -9.92e-01  3.138060978e+02   5.771020933e-01   2.4e-03  0.35  
+9   2.3e-02  6.7e-04  2.2e-02  -9.87e-01  1.096441943e+03   2.185171875e+00   6.7e-04  0.39  
+10  7.9e-03  2.3e-04  1.2e-02  -9.49e-01  2.893234715e+03   1.162857550e+01   2.3e-04  0.43  
+11  3.6e-03  1.1e-04  7.6e-03  -8.26e-01  5.067483926e+03   3.871034837e+01   1.1e-04  0.47  
+12  1.8e-03  5.4e-05  4.4e-03  -6.14e-01  6.637037324e+03   9.323816217e+01   5.4e-05  0.52  
+13  1.4e-03  4.0e-05  3.2e-03  -2.76e-01  6.574687377e+03   1.494933685e+02   4.0e-05  0.56  
+14  2.2e-04  6.6e-06  4.2e-04  -9.11e-02  4.404563711e+03   4.301383458e+02   6.6e-06  0.60  
+15  5.1e-05  1.5e-06  3.7e-05  9.60e-01   1.066299836e+03   4.764008964e+02   1.5e-06  0.64  
+16  6.5e-06  1.9e-07  1.6e-06  1.04e+00   4.510920520e+02   3.836509577e+02   1.9e-07  0.68  
+17  1.1e-06  3.3e-08  1.1e-07  1.05e+00   -2.175701663e+02  -2.290813947e+02  3.3e-08  0.72  
+18  3.6e-07  1.1e-08  2.2e-08  9.53e-01   -1.004353576e+03  -1.008800237e+03  1.1e-08  0.79  
+19  2.8e-07  8.1e-09  1.5e-08  9.79e-01   -1.523840057e+03  -1.527301854e+03  8.1e-09  0.92  
+20  2.6e-07  7.6e-09  1.4e-08  9.77e-01   -1.621387044e+03  -1.624656800e+03  7.6e-09  0.98  
+21  2.6e-07  7.6e-09  1.4e-08  9.88e-01   -1.627051850e+03  -1.630310295e+03  7.6e-09  1.05  
+22  2.6e-07  7.6e-09  1.4e-08  9.88e-01   -1.627051850e+03  -1.630310295e+03  7.6e-09  1.13  
+23  1.3e-07  3.5e-09  4.2e-09  9.98e-01   -2.136926146e+03  -2.138427125e+03  3.4e-09  1.19  
+24  1.1e-07  3.0e-09  3.4e-09  9.99e-01   -2.194962901e+03  -2.196274767e+03  3.0e-09  1.25  
+25  1.1e-07  3.0e-09  3.4e-09  9.99e-01   -2.195834913e+03  -2.197144014e+03  3.0e-09  1.32  
+26  1.1e-07  3.0e-09  3.4e-09  9.99e-01   -2.195834913e+03  -2.197144014e+03  3.0e-09  1.41  
+27  1.1e-07  3.0e-09  3.4e-09  1.00e+00   -2.197309563e+03  -2.198605590e+03  3.0e-09  1.48  
+28  1.1e-07  3.0e-09  3.4e-09  1.00e+00   -2.197355308e+03  -2.198650931e+03  3.0e-09  1.57  
+29  1.1e-07  3.0e-09  3.4e-09  1.00e+00   -2.197355308e+03  -2.198650931e+03  3.0e-09  1.65  
+Optimizer terminated. Time: 1.74    
+
+SDP solving time: 1.889397888 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = -2197.355307564878
+
+=================================================================
+
+julia> opt, sol, data = tssos_first(pop, t, 4, numeq=1,  TS="MD")
+***************************TSSOS***************************
+TSSOS is launching...
+Starting to compute the block structure...
+------------------------------------------------------
+The sizes of PSD blocks:
+[45, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+[1, 40, 6, 2, 3, 7, 16, 11, 31, 74]
+------------------------------------------------------
+Obtained the block structure in 0.954200174 seconds. The maximal size of blocks is 45.
+Assembling the SDP...
+There are 2380 affine constraints.
+SDP assembling time: 0.29153768 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2380            
+  Cones                  : 0               
+  Scalar variables       : 274             
+  Matrix variables       : 1286            
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 2380            
+  Cones                  : 0               
+  Scalar variables       : 274             
+  Matrix variables       : 1286            
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 2335
+Optimizer  - Cones                  : 426
+Optimizer  - Scalar variables       : 1505              conic                  : 1277            
+Optimizer  - Semi-definite variables: 861               scalarized             : 23756           
+Factor     - setup time             : 0.05              dense det. time        : 0.00            
+Factor     - ML order time          : 0.01              GP order time          : 0.00            
+Factor     - nonzeros before factor : 3.65e+05          after factor           : 5.91e+05        
+Factor     - dense dim.             : 0                 flops                  : 2.06e+08        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   7.0e+01  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  0.07  
+1   5.8e+01  8.4e-01  6.3e-01  1.90e+00   4.408379850e-01   5.366231543e-01   8.4e-01  0.17  
+2   3.7e+01  5.2e-01  3.3e-01  1.45e+00   3.154983213e+00   3.157512229e+00   5.2e-01  0.26  
+3   2.2e+01  3.1e-01  1.9e-01  -6.07e-02  1.356945422e+01   1.351482497e+01   3.1e-01  0.35  
+4   6.2e+00  8.9e-02  1.9e-02  6.16e-01   3.071383403e+01   3.075685648e+01   8.9e-02  0.45  
+5   2.2e+00  3.2e-02  3.0e-03  1.76e+00   2.625838957e+01   2.627028966e+01   3.2e-02  0.55  
+6   6.6e-01  9.5e-03  4.9e-04  1.47e+00   2.354990268e+01   2.355232309e+01   9.5e-03  0.66  
+7   1.8e-01  2.6e-03  9.1e-05  9.71e-01   2.276147431e+01   2.276185220e+01   2.6e-03  0.76  
+8   8.4e-02  1.2e-03  4.6e-05  2.31e-01   2.235523079e+01   2.235504199e+01   1.2e-03  0.85  
+9   2.8e-02  4.0e-04  1.8e-05  -6.98e-02  2.133905859e+01   2.133780413e+01   4.0e-04  0.95  
+10  8.8e-03  1.3e-04  7.7e-06  -3.92e-01  1.855743314e+01   1.855432683e+01   1.3e-04  1.06  
+11  3.7e-03  5.2e-05  3.8e-06  -4.05e-01  1.356910719e+01   1.356433824e+01   5.2e-05  1.15  
+12  1.6e-03  2.3e-05  1.8e-06  -3.15e-01  5.185826316e+00   5.179600294e+00   2.3e-05  1.25  
+13  8.0e-04  1.1e-05  1.1e-06  -2.98e-01  -5.880907551e+00  -5.889119560e+00  1.1e-05  1.34  
+14  5.4e-04  7.8e-06  7.3e-07  -1.50e-01  -1.288715313e+01  -1.289564983e+01  7.8e-06  1.43  
+15  2.4e-04  3.4e-06  3.6e-07  -2.15e-01  -3.363119683e+01  -3.364212264e+01  3.4e-06  1.52  
+16  1.1e-04  1.6e-06  1.9e-07  -2.02e-01  -6.006203592e+01  -6.007596188e+01  1.6e-06  1.61  
+17  4.9e-05  7.0e-07  9.2e-08  -1.75e-01  -9.717682879e+01  -9.719410790e+01  7.0e-07  1.71  
+18  2.6e-05  3.8e-07  5.5e-08  -2.26e-01  -1.345034085e+02  -1.345244193e+02  3.8e-07  1.80  
+19  7.2e-06  1.0e-07  1.8e-08  -2.19e-01  -2.384788978e+02  -2.385089754e+02  1.0e-07  1.90  
+20  3.0e-06  4.3e-08  8.8e-09  -2.69e-01  -3.478965381e+02  -3.479381973e+02  4.3e-08  1.99  
+21  1.1e-06  1.6e-08  3.6e-09  -1.72e-01  -4.966618133e+02  -4.967139320e+02  1.6e-08  2.09  
+22  4.6e-07  6.6e-09  1.7e-09  -2.24e-01  -6.873264341e+02  -6.873967639e+02  6.6e-09  2.18  
+23  1.6e-07  2.2e-09  6.7e-10  -1.72e-01  -9.756657712e+02  -9.757565733e+02  2.2e-09  2.28  
+24  5.0e-08  7.2e-10  2.5e-10  -2.27e-01  -1.393432176e+03  -1.393555900e+03  7.2e-10  2.38  
+25  2.0e-08  3.0e-10  1.2e-10  -2.37e-01  -1.864479565e+03  -1.864649118e+03  2.9e-10  2.47  
+26  8.6e-09  1.3e-10  5.5e-11  -1.56e-01  -2.391801551e+03  -2.392003631e+03  1.2e-10  2.56  
+27  3.3e-09  4.6e-11  2.3e-11  -1.59e-01  -3.149882463e+03  -3.150136868e+03  4.6e-11  2.65  
+28  1.3e-09  1.9e-11  1.1e-11  -1.67e-01  -4.099774385e+03  -4.100103388e+03  1.8e-11  2.74  
+29  3.9e-10  6.4e-12  4.0e-12  -1.66e-01  -5.516043922e+03  -5.516478384e+03  6.1e-12  2.83  
+30  1.4e-10  5.2e-12  1.8e-12  -2.09e-01  -7.234176342e+03  -7.234763338e+03  2.3e-12  2.93  
+31  7.3e-11  1.7e-12  6.7e-13  -1.89e-01  -9.728857357e+03  -9.729632769e+03  7.6e-13  3.02  
+32  1.7e-11  2.5e-12  2.8e-13  -1.42e-01  -1.253581550e+04  -1.253679272e+04  2.9e-13  3.12  
+33  9.7e-12  4.8e-12  1.7e-13  -1.47e-01  -1.461695431e+04  -1.461808824e+04  1.6e-13  3.26  
+34  3.9e-12  2.3e-12  7.7e-14  -1.70e-01  -1.835874610e+04  -1.836016637e+04  6.4e-14  3.38  
+35  2.6e-12  8.7e-13  5.3e-14  -1.40e-01  -2.026934331e+04  -2.027088717e+04  4.2e-14  3.50  
+36  8.9e-13  1.8e-12  2.1e-14  -1.66e-01  -2.631334354e+04  -2.631530970e+04  1.4e-14  3.62  
+37  5.7e-13  1.6e-12  1.4e-14  -1.42e-01  -2.932673195e+04  -2.932891451e+04  9.0e-15  3.75  
+38  1.9e-13  2.5e-12  5.3e-15  -1.71e-01  -3.823156577e+04  -3.823440565e+04  3.0e-15  3.87  
+39  1.2e-13  2.5e-12  3.4e-15  -1.40e-01  -4.308504861e+04  -4.308822416e+04  1.8e-15  3.98  
+40  4.5e-14  3.6e-12  1.5e-15  -1.65e-01  -5.445368450e+04  -5.445767441e+04  7.0e-16  4.10  
+41  2.1e-14  2.3e-12  7.6e-16  -1.41e-01  -6.556836092e+04  -6.557312309e+04  3.3e-16  4.21  
+42  1.5e-14  2.5e-12  5.7e-16  -1.30e-01  -7.055840920e+04  -7.056347722e+04  2.4e-16  4.32  
+43  4.9e-15  2.0e-12  2.0e-16  -1.55e-01  -9.256407415e+04  -9.257059214e+04  7.6e-17  4.44  
+44  2.6e-15  5.5e-12  1.2e-16  -1.39e-01  -1.083023898e+05  -1.083100524e+05  4.0e-17  4.56  
+45  1.3e-15  2.7e-12  6.3e-17  -1.53e-01  -1.279882596e+05  -1.279973336e+05  2.0e-17  4.69  
+46  9.2e-16  3.1e-12  4.8e-17  -1.46e-01  -1.378156890e+05  -1.378254291e+05  1.4e-17  4.81  
+47  3.0e-16  4.1e-12  1.8e-17  -1.57e-01  -1.791342020e+05  -1.791466042e+05  4.6e-18  4.93  
+48  1.5e-16  4.6e-12  8.8e-18  -1.31e-01  -2.113704326e+05  -2.113850185e+05  2.3e-18  5.05  
+49  9.4e-17  5.7e-12  6.0e-18  -1.43e-01  -2.344162607e+05  -2.344324680e+05  1.5e-18  5.17  
+50  4.3e-17  7.5e-12  2.8e-18  -1.55e-01  -2.812510319e+05  -2.812702078e+05  6.7e-19  5.29  
+51  4.2e-17  7.5e-12  2.6e-18  -1.31e-01  -2.843535641e+05  -2.843729370e+05  6.3e-19  5.42  
+52  4.2e-17  7.5e-12  2.6e-18  -1.33e-01  -2.843535641e+05  -2.843729370e+05  6.3e-19  5.60  
+53  4.2e-17  7.5e-12  2.6e-18  3.95e-01   -2.843535641e+05  -2.843729370e+05  6.3e-19  5.78  
+Optimizer terminated. Time: 5.97    
+
+SDP solving time: 6.393350144 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = -284353.5641273588
+
+
+========================================================================
+
+julia> opt, sol, data = tssos_first(pop, t, 4, numeq=1,  TS="block")
+***************************TSSOS***************************
+TSSOS is launching...
+Starting to compute the block structure...
+------------------------------------------------------
+The sizes of PSD blocks:
+[394, 9, 1]
+[1, 3, 74]
+------------------------------------------------------
+Obtained the block structure in 0.554345897 seconds. The maximal size of blocks is 394.
+Assembling the SDP...
+There are 12852 affine constraints.
+SDP assembling time: 0.960701753 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 12852           
+  Cones                  : 0               
+  Scalar variables       : 274             
+  Matrix variables       : 54              
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 12852           
+  Cones                  : 0               
+  Scalar variables       : 274             
+  Matrix variables       : 54              
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 12852
+Optimizer  - Cones                  : 36
+Optimizer  - Scalar variables       : 380               conic                  : 107             
+Optimizer  - Semi-definite variables: 19                scalarized             : 224170          
+Factor     - setup time             : 12.55             dense det. time        : 0.00            
+Factor     - ML order time          : 4.38              GP order time          : 0.00            
+Factor     - nonzeros before factor : 8.26e+07          after factor           : 8.26e+07        
+Factor     - dense dim.             : 0                 flops                  : 7.29e+11        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   3.2e+00  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  12.75 
+1   2.6e+00  8.0e-01  7.2e-01  -1.53e-01  1.239035454e-01   1.480032443e-01   8.0e-01  36.70 
+2   1.4e+00  4.2e-01  2.5e-01  2.23e-01   7.913018366e-01   8.791898638e-01   4.2e-01  60.54 
+3   8.8e-01  2.7e-01  2.3e-01  1.49e-01   9.886665509e+00   9.705780742e+00   2.7e-01  84.46 
+4   2.5e-01  7.6e-02  2.4e-02  7.23e-01   2.102035468e+01   2.106430516e+01   7.6e-02  109.28
+5   8.4e-02  2.6e-02  2.1e-03  1.86e+00   2.291596394e+01   2.292853714e+01   2.6e-02  133.80
+6   4.5e-02  1.4e-02  7.0e-04  3.38e+00   2.282834317e+01   2.283026369e+01   1.4e-02  157.73
+7   1.1e-02  3.4e-03  6.7e-05  1.90e+00   2.283294089e+01   2.283327039e+01   3.4e-03  182.00
+8   1.8e-03  5.4e-04  3.3e-06  1.44e+00   2.283492488e+01   2.283498376e+01   5.4e-04  206.93
+9   1.4e-03  4.2e-04  2.2e-06  1.06e+00   2.283498385e+01   2.283503048e+01   4.2e-04  230.55
+10  2.5e-04  7.6e-05  1.4e-07  1.03e+00   2.283497309e+01   2.283498307e+01   7.6e-05  255.52
+11  8.9e-05  2.7e-05  3.1e-08  9.35e-01   2.283495328e+01   2.283495713e+01   2.7e-05  279.40
+12  4.2e-05  1.3e-05  1.1e-08  8.46e-01   2.283495708e+01   2.283495908e+01   1.3e-05  303.48
+13  8.2e-06  2.5e-06  1.0e-09  7.92e-01   2.283496763e+01   2.283496807e+01   2.5e-06  328.34
+14  3.0e-06  9.0e-07  2.7e-10  6.56e-01   2.283496988e+01   2.283497006e+01   9.0e-07  352.39
+15  1.6e-06  4.6e-07  1.1e-10  5.68e-01   2.283497533e+01   2.283497543e+01   4.6e-07  376.05
+16  7.0e-07  2.0e-07  4.0e-11  5.87e-01   2.283497428e+01   2.283497433e+01   2.0e-07  402.26
+17  3.2e-07  9.3e-08  1.6e-11  5.16e-01   2.283497496e+01   2.283497498e+01   9.3e-08  427.05
+18  2.6e-07  5.4e-08  7.8e-12  5.35e-01   2.283497568e+01   2.283497570e+01   5.3e-08  450.69
+19  1.4e-07  3.2e-08  3.9e-12  5.23e-01   2.283497687e+01   2.283497688e+01   3.0e-08  475.70
+20  6.6e-08  1.6e-08  1.5e-12  5.05e-01   2.283497754e+01   2.283497754e+01   1.4e-08  500.42
+21  6.6e-08  1.6e-08  1.5e-12  6.81e-01   2.283497754e+01   2.283497754e+01   1.4e-08  525.72
+22  6.6e-08  1.6e-08  1.5e-12  5.45e-01   2.283497752e+01   2.283497752e+01   1.4e-08  550.65
+23  4.4e-08  8.9e-09  7.2e-13  4.66e-01   2.283497792e+01   2.283497792e+01   7.4e-09  575.49
+24  4.4e-08  8.9e-09  7.2e-13  1.55e+00   2.283497792e+01   2.283497792e+01   7.4e-09  600.56
+25  2.3e-08  1.0e-08  2.7e-13  4.21e-01   2.283497759e+01   2.283497759e+01   3.2e-09  625.62
+Optimizer terminated. Time: 625.65  
+
+SDP solving time: 625.99410891 seconds.
+optimum = 22.834977590099307
+
+==========================================================
+
+julia> opt, sol, data = cs_tssos_first(pop, t, 5, numeq=1, CS="NC", TS="MD")
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[6, 5]
+[4, 4]
+------------------------------------------------------
+Obtained the variable cliques in 0.000233539 seconds. The maximal size of cliques is 6.
+Starting to compute the block structure...
+Obtained the block structure in 0.478930831 seconds. The maximal size of blocks is 28.
+Assembling the SDP...
+There are 3363 affine constraints.
+SDP assembling time: 0.086495941 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 3363            
+  Cones                  : 0               
+  Scalar variables       : 1807            
+  Matrix variables       : 1232            
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 201
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 3363            
+  Cones                  : 0               
+  Scalar variables       : 1807            
+  Matrix variables       : 1232            
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 3145
+Optimizer  - Cones                  : 291
+Optimizer  - Scalar variables       : 1072              conic                  : 978             
+Optimizer  - Semi-definite variables: 942               scalarized             : 49886           
+Factor     - setup time             : 0.09              dense det. time        : 0.00            
+Factor     - ML order time          : 0.02              GP order time          : 0.00            
+Factor     - nonzeros before factor : 7.27e+05          after factor           : 1.02e+06        
+Factor     - dense dim.             : 0                 flops                  : 5.03e+08        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   3.5e+01  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  0.12  
+1   3.1e+01  8.7e-01  8.5e-01  -3.02e-01  -3.224644543e-02  -6.126047043e-02  8.7e-01  0.28  
+2   2.3e+01  6.5e-01  8.4e-01  -7.94e-01  1.229173145e+00   6.589376143e-01   6.5e-01  0.44  
+3   1.3e+01  3.8e-01  5.4e-01  -8.61e-01  1.417663480e+00   2.768070029e-01   3.8e-01  0.60  
+4   3.7e+00  1.0e-01  2.8e-01  -9.79e-01  6.542385749e+00   1.532669772e-01   1.0e-01  0.79  
+5   1.5e+00  4.3e-02  1.8e-01  -9.98e-01  1.729316318e+01   1.265083891e-01   4.3e-02  0.95  
+6   5.3e-01  1.5e-02  1.1e-01  -9.99e-01  5.046305181e+01   1.306235706e-01   1.5e-02  1.12  
+7   2.3e-01  6.6e-03  7.1e-02  -1.00e+00  1.175572216e+02   1.450024923e-01   6.6e-03  1.27  
+8   7.0e-02  2.0e-03  3.9e-02  -1.00e+00  3.935523274e+02   1.764469259e-01   2.0e-03  1.44  
+9   2.6e-02  7.4e-04  2.4e-02  -1.00e+00  1.060691351e+03   1.704079299e-01   7.4e-04  1.60  
+10  6.6e-03  1.9e-04  1.2e-02  -9.97e-01  4.202468469e+03   2.699233512e-01   1.9e-04  1.78  
+11  1.6e-03  4.5e-05  5.8e-03  -9.90e-01  1.722726388e+04   1.207774788e+00   4.5e-05  1.96  
+12  7.6e-04  2.1e-05  4.0e-03  -9.66e-01  3.478118538e+04   5.055229885e+00   2.1e-05  2.12  
+13  2.6e-04  7.2e-06  2.2e-03  -9.29e-01  9.084788115e+04   3.489016187e+01   7.2e-06  2.30  
+14  3.6e-05  1.0e-06  5.6e-04  -7.84e-01  3.041115054e+05   2.534226193e+02   1.0e-06  2.48  
+15  2.0e-05  5.5e-07  2.4e-04  1.30e-01   1.975219344e+05   3.718780060e+02   5.5e-07  2.65  
+16  2.4e-06  6.8e-08  1.1e-05  4.79e-01   2.760586444e+04   5.805756529e+02   6.8e-08  2.83  
+17  3.9e-07  1.1e-08  7.9e-07  9.78e-01   5.843571041e+03   6.150868821e+02   1.1e-08  3.02  
+18  3.0e-07  9.8e-10  1.9e-08  9.68e-01   1.022727810e+03   6.069291529e+02   9.6e-10  3.20  
+19  7.3e-08  9.6e-10  8.4e-10  9.99e-01   5.492355850e+02   4.960332312e+02   1.2e-10  3.98  
+20  1.5e-08  4.5e-09  1.3e-10  1.00e+00   -1.140409684e+02  -1.293446004e+02  3.3e-11  4.23  
+21  1.4e-08  4.7e-09  1.2e-10  1.00e+00   -1.269854380e+02  -1.420395158e+02  3.3e-11  4.60  
+22  1.4e-08  4.7e-09  1.2e-10  1.00e+00   -1.334261025e+02  -1.483562803e+02  3.2e-11  4.84  
+23  1.4e-08  4.7e-09  1.2e-10  1.00e+00   -1.366403635e+02  -1.515087658e+02  3.2e-11  5.08  
+24  1.4e-08  4.7e-09  1.2e-10  1.00e+00   -1.366403635e+02  -1.515087658e+02  3.2e-11  5.37  
+Optimizer terminated. Time: 5.66    
+
+SDP solving time: 6.365305971 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = -136.6403635411759
+
+=====================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+julia> opt, sol, data = tssos_first(pop, t, 4, numeq=1,  TS="block", solution=true)
+***************************TSSOS***************************
+TSSOS is launching...
+Starting to compute the block structure...
+------------------------------------------------------
+The sizes of PSD blocks:
+[394, 9, 1]
+[1, 3, 74]
+------------------------------------------------------
+Obtained the block structure in 0.424785803 seconds. The maximal size of blocks is 394.
+Assembling the SDP...
+There are 12852 affine constraints.
+SDP assembling time: 0.646857967 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 12852           
+  Cones                  : 0               
+  Scalar variables       : 274             
+  Matrix variables       : 132             
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.00    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 12852           
+  Cones                  : 0               
+  Scalar variables       : 274             
+  Matrix variables       : 132             
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 12852
+Optimizer  - Cones                  : 36
+Optimizer  - Scalar variables       : 380               conic                  : 107             
+Optimizer  - Semi-definite variables: 97                scalarized             : 228460          
+Factor     - setup time             : 12.58             dense det. time        : 0.00            
+Factor     - ML order time          : 4.33              GP order time          : 0.00            
+Factor     - nonzeros before factor : 8.26e+07          after factor           : 8.26e+07        
+Factor     - dense dim.             : 0                 flops                  : 7.29e+11        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   2.3e+01  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  12.80 
+1   1.8e+01  8.0e-01  4.3e-01  1.68e+00   2.796658067e-01   5.336359136e-01   8.0e-01  37.20 
+2   1.5e+01  6.6e-01  2.8e-01  1.65e+00   1.244339720e+00   1.438990035e+00   6.6e-01  61.47 
+3   7.6e+00  3.3e-01  1.6e-01  -9.10e-03  1.008434985e+01   1.016355456e+01   3.3e-01  85.97 
+4   2.6e+00  1.1e-01  3.8e-02  4.22e-01   2.322374723e+01   2.324503730e+01   1.1e-01  111.07
+5   7.8e-01  3.4e-02  3.7e-03  1.31e+00   2.474195260e+01   2.475544213e+01   3.4e-02  136.47
+6   1.5e-01  6.8e-03  1.2e-04  1.88e+00   2.322287330e+01   2.322516914e+01   6.8e-03  163.03
+7   7.7e-02  3.4e-03  4.7e-05  1.99e+00   2.296983464e+01   2.297061319e+01   3.4e-03  187.56
+8   1.4e-02  6.0e-04  3.4e-06  1.40e+00   2.285435379e+01   2.285446580e+01   6.0e-04  213.10
+9   2.9e-03  1.3e-04  3.3e-07  1.11e+00   2.283888825e+01   2.283891098e+01   1.3e-04  237.94
+10  5.5e-04  2.4e-05  2.9e-08  9.83e-01   2.283572745e+01   2.283573183e+01   2.4e-05  263.58
+11  2.7e-04  1.2e-05  1.0e-08  9.29e-01   2.283534808e+01   2.283535029e+01   1.2e-05  288.53
+12  1.4e-04  6.1e-06  3.9e-09  9.09e-01   2.283517700e+01   2.283517818e+01   6.1e-06  313.03
+13  2.7e-05  1.2e-06  3.8e-10  8.94e-01   2.283501514e+01   2.283501539e+01   1.2e-06  338.78
+14  1.2e-05  5.4e-07  1.3e-10  7.05e-01   2.283499708e+01   2.283499721e+01   5.4e-07  363.38
+15  6.5e-06  2.8e-07  5.8e-11  6.62e-01   2.283498985e+01   2.283498992e+01   2.8e-07  389.03
+16  2.7e-06  1.2e-07  1.9e-11  6.41e-01   2.283498267e+01   2.283498270e+01   1.2e-07  414.43
+17  1.7e-06  7.1e-08  9.3e-12  7.74e-01   2.283497745e+01   2.283497747e+01   7.1e-08  438.61
+18  9.4e-07  4.1e-08  4.7e-12  4.57e-01   2.283497756e+01   2.283497758e+01   4.0e-08  464.35
+19  7.7e-07  2.7e-08  2.5e-12  5.69e-01   2.283497669e+01   2.283497670e+01   2.6e-08  489.91
+20  7.7e-07  2.7e-08  2.5e-12  9.68e-01   2.283497669e+01   2.283497670e+01   2.6e-08  515.50
+21  7.7e-07  2.7e-08  2.5e-12  9.69e-01   2.283497669e+01   2.283497670e+01   2.6e-08  541.21
+Optimizer terminated. Time: 566.89  
+
+SDP solving time: 567.417565823 seconds.
+termination status: SLOW_PROGRESS
+solution status: FEASIBLE_POINT
+optimum = 22.834976693239877
+Global optimality certified!
+
+
+==============================================================
+
+
+
+
+
+
+julia> opt, sol, data = cs_tssos_first(pop, t, 4, numeq=1, CS="NC",TS=false)
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[6, 5]
+[4, 4]
+------------------------------------------------------
+Obtained the variable cliques in 0.000154995 seconds. The maximal size of cliques is 6.
+Assembling the SDP...
+There are 9327 affine constraints.
+SDP assembling time: 0.250394578 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 9327            
+  Cones                  : 0               
+  Scalar variables       : 3571            
+  Matrix variables       : 22              
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.01    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 9327            
+  Cones                  : 0               
+  Scalar variables       : 3571            
+  Matrix variables       : 22              
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 9327
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 926               conic                  : 926             
+Optimizer  - Semi-definite variables: 22                scalarized             : 166656          
+Factor     - setup time             : 2.23              dense det. time        : 0.00            
+Factor     - ML order time          : 0.28              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.73e+07          after factor           : 2.10e+07        
+Factor     - dense dim.             : 2                 flops                  : 6.30e+10        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   8.0e+00  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  2.33  
+1   6.3e+00  7.9e-01  8.1e-01  -5.40e-01  5.127563516e-02   -6.182082587e-02  7.9e-01  5.44  
+2   2.5e+00  3.2e-01  5.3e-01  -9.51e-01  2.086937462e+00   2.571621966e-01   3.2e-01  8.34  
+3   4.5e-01  5.6e-02  2.2e-01  -9.64e-01  1.469053219e+01   4.733156159e-01   5.6e-02  11.55 
+4   1.2e-01  1.4e-02  1.1e-01  -9.95e-01  5.766028911e+01   7.090743549e-01   1.4e-02  14.54 
+5   1.7e-02  2.2e-03  4.2e-02  -1.00e+00  3.713730482e+02   2.292274512e+00   2.2e-03  17.86 
+6   2.6e-03  3.3e-04  1.6e-02  -9.91e-01  2.388344217e+03   1.076347886e+01   3.3e-04  21.13 
+7   4.1e-04  5.1e-05  5.8e-03  -9.55e-01  1.277041566e+04   8.612286937e+01   5.1e-05  24.36 
+8   6.7e-05  8.4e-06  1.4e-03  -6.60e-01  2.652610050e+04   3.571728699e+02   8.4e-06  27.60 
+9   7.3e-06  9.2e-07  4.0e-05  3.99e-01   2.489184851e+03   5.510324967e+02   9.2e-07  30.87 
+10  1.1e-06  1.4e-07  2.3e-06  1.23e+00   8.258826672e+02   5.403516369e+02   1.4e-07  34.21 
+11  1.6e-07  1.3e-08  5.4e-08  1.21e+00   5.228282185e+02   5.057776241e+02   1.2e-08  37.29 
+12  1.4e-08  7.2e-09  4.0e-10  9.99e-01   4.027581322e+02   4.020426967e+02   4.6e-10  51.63 
+13  1.3e-08  7.6e-09  3.7e-10  1.00e+00   3.947420948e+02   3.940586041e+02   4.4e-10  57.61 
+14  1.3e-08  8.1e-09  3.7e-10  1.00e+00   3.937170792e+02   3.930374975e+02   4.4e-10  60.85 
+15  1.3e-08  8.1e-09  3.7e-10  1.00e+00   3.937170792e+02   3.930374975e+02   4.4e-10  64.23 
+16  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935739054e+02   3.928968799e+02   4.3e-10  67.50 
+17  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935559021e+02   3.928791978e+02   4.3e-10  70.84 
+18  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935468941e+02   3.928703504e+02   4.3e-10  74.27 
+19  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935446413e+02   3.928681377e+02   4.3e-10  77.78 
+20  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935446413e+02   3.928681377e+02   4.3e-10  81.23 
+21  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935445186e+02   3.928680905e+02   4.3e-10  84.65 
+22  1.3e-08  8.2e-09  3.7e-10  1.00e+00   3.935444573e+02   3.928680669e+02   4.3e-10  88.06 
+Optimizer terminated. Time: 91.47   
+
+SDP solving time: 91.640228446 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = 393.54445733403753
+
+===============================================================
+
+julia> opt, sol, data = cs_tssos_first(pop, t, 4, numeq=1, CS="MF",TS=false)
+************************TSSOS************************
+TSSOS is launching...
+------------------------------------------------------
+The clique sizes of varibles:
+[8, 7]
+[1, 1]
+------------------------------------------------------
+Obtained the variable cliques in 0.000279851 seconds. The maximal size of cliques is 8.
+Assembling the SDP...
+There are 16302 affine constraints.
+SDP assembling time: 0.747007169 seconds.
+Solving the SDP...
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 16302           
+  Cones                  : 0               
+  Scalar variables       : 13696           
+  Matrix variables       : 16              
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator started.
+Freed constraints in eliminator : 0
+Eliminator terminated.
+Eliminator - tries                  : 2                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.00            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.01    
+Problem
+  Name                   :                 
+  Objective sense        : max             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 16302           
+  Cones                  : 0               
+  Scalar variables       : 13696           
+  Matrix variables       : 16              
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 16302
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 3005              conic                  : 3005            
+Optimizer  - Semi-definite variables: 16                scalarized             : 356235          
+Factor     - setup time             : 17.03             dense det. time        : 0.00            
+Factor     - ML order time          : 2.41              GP order time          : 0.00            
+Factor     - nonzeros before factor : 9.90e+07          after factor           : 9.90e+07        
+Factor     - dense dim.             : 2                 flops                  : 8.39e+11        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   2.0e+00  1.0e+00  1.0e+00  0.00e+00   0.000000000e+00   0.000000000e+00   1.0e+00  17.39 
+1   1.6e+00  8.1e-01  8.1e-01  -3.43e-01  1.019467597e-01   1.128130467e-02   8.1e-01  45.30 
+2   7.2e-01  3.6e-01  5.6e-01  -9.77e-01  1.479908195e+00   5.409741684e-02   3.6e-01  72.73 
+3   3.8e-01  1.9e-01  4.0e-01  -9.76e-01  3.681731852e+00   5.153407943e-02   1.9e-01  100.42
+4   1.3e-01  6.3e-02  2.3e-01  -9.88e-01  1.281255211e+01   6.319844670e-02   6.3e-02  129.08
+5   5.2e-02  2.6e-02  1.5e-01  -9.94e-01  3.205163254e+01   1.843816079e-01   2.6e-02  156.57
+6   1.1e-02  5.3e-03  6.6e-02  -9.94e-01  1.585904684e+02   1.333510137e+00   5.3e-03  185.00
+7   1.4e-03  7.1e-04  2.4e-02  -9.88e-01  1.117687877e+03   1.775474293e+01   7.1e-04  214.65
+8   3.9e-04  2.0e-04  1.1e-02  -9.09e-01  3.235315130e+03   9.444279301e+01   2.0e-04  242.48
+9   4.9e-05  2.5e-05  1.8e-03  -5.87e-01  5.977562701e+03   3.946664665e+02   2.5e-05  271.12
+10  6.3e-06  3.1e-06  2.2e-05  8.74e-01   5.591306604e+02   5.095413015e+02   3.1e-06  300.39
+11  2.1e-06  1.1e-06  7.4e-06  1.27e+00   5.372766519e+02   4.886219337e+02   1.1e-06  328.22
+12  2.8e-07  5.7e-08  9.8e-08  1.15e+00   4.558266027e+02   4.528684170e+02   5.4e-08  357.60
+13  7.4e-08  8.3e-09  6.1e-09  9.99e-01   3.436841035e+02   3.431418509e+02   7.9e-09  493.11
+14  7.4e-08  8.3e-09  6.1e-09  1.00e+00   3.436841035e+02   3.431418509e+02   7.9e-09  522.37
+15  7.4e-08  8.3e-09  6.1e-09  1.00e+00   3.436841035e+02   3.431418509e+02   7.9e-09  551.73
+16  7.3e-08  8.3e-09  6.1e-09  1.00e+00   3.436765812e+02   3.431356970e+02   7.9e-09  581.25
+17  7.3e-08  8.3e-09  6.1e-09  1.00e+00   3.436728113e+02   3.431326108e+02   7.9e-09  610.63
+Optimizer terminated. Time: 640.44  
+
+SDP solving time: 641.298103898 seconds.
+termination status: SLOW_PROGRESS
+solution status: UNKNOWN_RESULT_STATUS
+optimum = 343.67281127709964
+
+

@@ -1,0 +1,390 @@
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 00:30:43 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+
+
+COMPILATION TIME     =        0.000 SECONDS      2 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 00:30:43 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Analysis      SOLVE GAMS_MODEL Using NLP From line 42
+
+
+**** Exec Error at line 27: power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0
+**** Exec Error at line 27: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 28: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 29: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 30: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 31: rPower: FUNC DOMAIN: x**y, x=0,y<0
+**** Exec Error at line 31: power: FUNC SINGULAR: pow(x,-1), |x| too small
+**** Exec Error at line 32: rPower: FUNC DOMAIN: x**y, x=0,y<0
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_1_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_2_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_6_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_6_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_7_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_7_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_3_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_4_
+
+**** Matrix error - coefficient in variable below is UNDF
+     t_4_
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 00:30:43 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE GAMS_MODEL Using NLP From line 42
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           6     SINGLE EQUATIONS            6
+BLOCKS OF VARIABLES           9     SINGLE VARIABLES            9
+NON ZERO ELEMENTS            23     NON LINEAR N-Z             22
+CODE LENGTH                 169     CONSTANT POOL              59
+
+
+GENERATION TIME      =        0.002 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 00:30:43 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 42
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   GAMS_MODEL          OBJECTIVE  GAMS_OBJECTIVE
+     TYPE    NLP                 DIRECTION  MINIMIZE
+     SOLVER  ANTIGONE            FROM LINE  42
+
+**** SOLVER STATUS     1 Normal Completion         
+**** MODEL STATUS      2 Locally Optimal           
+**** OBJECTIVE VALUE                1.7486
+
+ RESOURCE USAGE, LIMIT        145.000      7200.000
+ ITERATION COUNT, LIMIT         4    2147483647
+ EVALUATION ERRORS              0             0
+
+ANTIGONE         33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+*** This solver runs with a community license. No commercial use.
+-------------------------------------------------------------------------------
+ANTIGONE: Algorithms for coNTinuous/Integer Global Optimization; Version 1.1
+
+          Ruth Misener and Christodoulos A. Floudas
+
+          Computer-Aided Systems Laboratory (CASL)
+          Department of Chemical & Biological Engineering; Princeton University
+-------------------------------------------------------------------------------
+ 
+Termination Status : Found feasible point; guessed variable bounds
+Best Feasible Point: +1.748599e+00
+Best Possible Point: -1.688038e+00 (+1.748e+00 if ANTIGONE bounds reasonable)
+       Relative Gap: +1.965366e+00
+CONOPT 3         33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+*** This solver runs with a community license. No commercial use.
+ 
+ 
+    C O N O P T 3   version 3.17L
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+    The model has 9 variables and 6 constraints
+    with 23 Jacobian elements, 22 of which are nonlinear.
+    The Hessian of the Lagrangian has 7 elements on the diagonal,
+    14 elements below the diagonal, and 8 nonlinear variables.
+ 
+                   Pre-triangular equations:   0
+                   Post-triangular equations:  1
+ 
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+ 
+ CONOPT time Total                            0.001 seconds
+   of which: Function evaluations             0.000 =  0.0%
+             1st Derivative evaluations       0.000 =  0.0%
+ 
+
+**** ERRORS/WARNINGS IN EQUATION eqs_1_
+     2 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+     2 error(s): power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0 (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_2_
+     8 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_3_
+     6 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_4_
+     4 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+
+**** ERRORS/WARNINGS IN EQUATION eqs_5_
+     4 error(s): power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+     1 warning(s): vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+     6 error(s): vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+
+**** ERRORS/WARNINGS IN EQUATION f
+     6 error(s): vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+     4 warning(s): vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU eqs_1_            -1.0000        -1.0000        -1.0000         0.9567      
+---- EQU eqs_2_            -1.0000        -1.0000        -1.0000         0.3255      
+---- EQU eqs_3_            -1.0000        -1.0000        -1.0000         0.1277      
+---- EQU eqs_4_            -1.0000        -1.0000        -1.0000         1.5373      
+---- EQU eqs_5_            -1.0000        -1.0000        -1.0000         0.3255      
+---- EQU f                   .              .              .             1.0000      
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR t_1_                .             0.6649        +INF             .          
+---- VAR t_5_                .             0.1875        +INF      8.8870056E-8      
+---- VAR t_2_                .             1.6941        +INF            EPS         
+---- VAR t_6_                .             1.2409        +INF             .          
+---- VAR t_7_                .             2.9265        +INF             .          
+---- VAR t_0_                .             5.1536        +INF             .          
+---- VAR t_3_                .             7.4339        +INF             .          
+---- VAR t_4_                .             0.8800        +INF      2.4374371E-9      
+---- VAR GAMS_OBJE~        -INF            1.7486        +INF             .          
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+                             8     ERRORS ( ****)
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 00:30:43 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE GAMS_MODEL Using NLP From line 42
+
+
+**** SOLVER STATUS FILE LISTED BELOW
+=5 1 power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0 (RETURNED 1E299)
+=5 1 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 !vcPower: GRAD SINGULAR: x**c, x=0, 0<c<1
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 1 power: FUNC SINGULAR: pow(x,i), |x| tiny, i < 0 (RETURNED 1E299)
+=5 1 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 2 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 3 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 4 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 5 power: FUNC SINGULAR: pow(x,-1), |x| too small (RETURNED 1E299)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=5 6 vcPower: FUNC DOMAIN: x**c, x=0, c<0 (RETURNED 0)
+=C
+=CANTIGONE         33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+=0ANTIGONE         33.2.0 r4f23b21 Released Dec  1, 2020 LEG x86 64bit/Linux    
+=C*** This solver runs with a community license. No commercial use.
+=1
+-------------------------------------------------------------------------------
+=2
+=1
+ANTIGONE: Algorithms for coNTinuous/Integer Global Optimization; Version 1.1
+
+=2
+=1
+          Ruth Misener and Christodoulos A. Floudas
+
+=2
+=1
+          Computer-Aided Systems Laboratory (CASL)
+=2
+=1
+          Department of Chemical & Biological Engineering; Princeton University
+=2
+=1
+-------------------------------------------------------------------------------
+=2
+=1
+ 
+=2
+=1
+Termination Status : Found feasible point; guessed variable bounds
+=2
+=1
+Best Feasible Point: +1.748599e+00
+=2
+=1
+Best Possible Point: -1.688038e+00 (+1.748e+00 if ANTIGONE bounds reasonable)
+=2
+=1
+       Relative Gap: +1.965366e+00
+=2
+=CCONOPT 3         33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+=0CONOPT 3         33.2.0 r4f23b21 Released Dec 01, 2020 LEG x86 64bit/Linux    
+=C*** This solver runs with a community license. No commercial use.
+=1
+ 
+ 
+    C O N O P T 3   version 3.17L
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+=2
+    1  INPUT                                                                  (DEFAULT)
+    2  BRANCH * MAJERR MINERR JACERR                                          (DEFAULT)
+    3  OPTIMIZE                                                               (DEFAULT)
+    4  BRANCH * * * * * * MAJERR                                              (DEFAULT)
+    5  OUTPUT                                                                 (DEFAULT)
+    6  EXIT                                                                   (DEFAULT)
+    7  MAJERR MESSAGE MAJOR ERROR - TERMINATE                                 (DEFAULT)
+    8  EXIT                                                                   (DEFAULT)
+    9  MINERR MESSAGE MINOR ERROR - TERMINATE                                 (DEFAULT)
+   10  EXIT                                                                   (DEFAULT)
+   11  JACERR MESSAGE FUNCTION OR DERIVATIVE ERROR                            (DEFAULT)
+   12  OUTPUT                                                                 (DEFAULT)
+   13  EXIT                                                                   (DEFAULT)
+ 
+  ***  Line    1  INPUT
+ 
+  ***  Line    0  SET       LSAZRW   = TRUE
+ 
+  ***  Line    0  SET       LFEERR   =           0
+ 
+  ***  Line    0  SET       LFITER   =  1000000000
+ 
+  ***  Line    0  SET       RVTIME   =      5.000000000
+=1
+ 
+    The model has 9 variables and 6 constraints
+    with 23 Jacobian elements, 22 of which are nonlinear.
+    The Hessian of the Lagrangian has 7 elements on the diagonal,
+    14 elements below the diagonal, and 8 nonlinear variables.
+=2
+ 
+  ***  Line    2  BRANCH with Lbranch =  1
+ 
+  ***  Line    3  OPTIMIZE
+ 
+Search for a first feasible solution
+ 
+ 
+   Iter Phase Ninf   Infeasibility   RGmax    NSB   Step InItr MX OK
+      0   0        1.0178707877E-09 (Input point)
+=1
+ 
+                   Pre-triangular equations:   0
+                   Post-triangular equations:  1
+ 
+=2
+      1   0        1.0178707877E-09 (After pre-processing)
+      2   0        6.5246741343E-10 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    1.74859882916
+ 
+Search for an optimal solution.
+ 
+ 
+   Iter Phase Ninf     Objective     RGmax    NSB   Step InItr MX OK
+      3   3        1.7485988292E+00 8.9E-08     0 0.0E+00    0 F  T
+      4   3        1.7485988292E+00 8.9E-08     0
+=1
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+=2
+ 
+  ***  Line    4  BRANCH with Lbranch =  1
+ 
+  ***  Line    5  OUTPUT
+ 
+  ***  Line    6  EXIT
+=1
+ 
+ CONOPT time Total                            0.001 seconds
+   of which: Function evaluations             0.000 =  0.0%
+             1st Derivative evaluations       0.000 =  0.0%
+ 
+=2
+ 
+ Work length =       3551 double words  =    0.03 Mbytes
+    Estimate =       3551 double words  =    0.03 Mbytes
+    Max used =       1272 double words  =    0.01 Mbytes
+ 
+ Timing for Function Evaluations:
+ 
+ Statistics for FDEval-Fnc Calls:         7. Time:      0.000 T/C:    0.0000E+00
+ Statistics for FDEval-Drv Calls:        19. Time:      0.000 T/C:    0.0000E+00
+ Statistics for 2DDirLag   Calls:         0. Time:      0.000 T/C:    0.0000E+00
+ Statistics for 2DLagr     Calls:         0. Time:      0.000 T/C:    0.0000E+00
+ 
+**** SOLVER STATUS FILE LISTED ABOVE
+GAMS 33.2.0  r4f23b21 Released Dec  1, 2020 LEX-LEG x86 64bit/Linux - 04/18/21 00:30:43 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+E x e c u t i o n
+
+
+EXECUTION TIME       =      144.239 SECONDS      3 MB  33.2.0 r4f23b21 LEX-LEG
+
+
+USER: GAMS Community License for Riley Murray        G201229|0002AO-GEN
+      California Institute of Technology, USA                     CL736
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/apr6_geo.gams
+Output     /home/riley/Documents/Research/upper_bounds/sage_upper_bounds/riley_scripts/bw1971/geo_antigone.lst
+
+**** USER ERROR(S) ENCOUNTERED

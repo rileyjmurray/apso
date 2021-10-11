@@ -1,0 +1,64 @@
+$offlisting
+$offdigit
+
+EQUATIONS
+	eqs_1_
+	eqs_2_
+	eqs_3_
+	eqs_4_
+	eqs_5_
+	f;
+
+VARIABLES
+	GAMS_OBJECTIVE
+	x_1_
+	x_5_
+	x_2_
+	x_6_
+	x_7_
+	x_0_
+	x_3_
+	x_4_;
+
+
+eqs_1_.. (-0.12940000000000002)*exp(- 3.0*x_1_) + (-0.105)*exp(- x_5_) + 1 =e= 0 ;
+eqs_2_.. (-10.299999999999999)*exp(3.0*x_1_ - x_2_ + x_6_ - x_7_) + (-1.2)*exp(- x_2_ - x_7_) + 1 =e= 0 ;
+eqs_3_.. (-4.6799999999999997)*exp(- x_0_ + 3.0*x_1_) + (-6.1299999999999999)*exp(- x_0_ + 2.0*x_1_) + (-1.605)*exp(- x_0_ + x_1_) + 1 =e= 0 ;
+eqs_4_.. (-0.17900000000000002)*exp(x_6_) + (-0.30199999999999999)*exp(3.0*x_1_ - x_5_ + x_6_) + (-0.0357)*exp(- x_5_) + 1 =e= 0 ;
+eqs_5_.. (-0.04856907480752663)*exp(x_2_ - 0.2*x_3_ - 0.8*x_4_ + x_7_) + (-0.23052417218868185)*exp(0.4*x_2_ - 0.43*x_3_ + x_7_) + (-0.35999999999999999)*exp(x_2_ - x_3_ + x_7_) + (-0.02)*exp(x_2_ - x_4_ + x_7_) + (-0.04)*exp(x_7_) + 1 =e= 0 ;
+f.. GAMS_OBJECTIVE =e= 0.045306661874419479*exp(0.782*x_0_) + 0.052250000000000005*exp(x_1_) + 0.1531862000665777*exp(0.9*x_1_) + 0.525*exp(3.0*x_1_) + 0.1547490123646981*exp(0.467*x_5_) + 0.19612882581198332*exp(1.33*x_2_ - 0.8*x_3_) + 0.12445990654786225*exp(0.546*x_3_) + 0.0025910815708459485*exp(2.85*x_2_ - 1.7*x_3_) + 0.0945*exp(x_4_) + 0.0002662599617400149*exp(- 1.8*x_3_ + 2.8*x_4_) + 11.600000000000001*exp(x_5_) + (-2.0500000000000003)*exp(x_5_ + x_6_) + (-2.7800000000000002)*exp(3.0*x_1_ + x_6_) ;
+
+
+MODEL GAMS_MODEL /all/ ;
+option solprint=on;
+option sysOut=on;
+option threads=0;
+option resLim=7200;
+option limrow=0;
+option limcol=0;
+option solvelink=5;
+SOLVE GAMS_MODEL USING nlp minimizing GAMS_OBJECTIVE;
+
+Scalars MODELSTAT 'model status', SOLVESTAT 'solve status';
+MODELSTAT = GAMS_MODEL.modelstat;
+SOLVESTAT = GAMS_MODEL.solvestat;
+
+Scalar OBJEST 'best objective', OBJVAL 'objective value';
+OBJEST = GAMS_MODEL.objest;
+OBJVAL = GAMS_MODEL.objval;
+
+Scalar NUMVAR 'number of variables';
+NUMVAR = GAMS_MODEL.numvar
+
+Scalar NUMEQU 'number of equations';
+NUMEQU = GAMS_MODEL.numequ
+
+Scalar NUMDVAR 'number of discrete variables';
+NUMDVAR = GAMS_MODEL.numdvar
+
+Scalar NUMNZ 'number of nonzeros';
+NUMNZ = GAMS_MODEL.numnz
+
+Scalar ETSOLVE 'time to execute solve statement';
+ETSOLVE = GAMS_MODEL.etsolve
+
