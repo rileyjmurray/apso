@@ -56,7 +56,7 @@ def blau_wilde(auto_scale=False):
 def run_sage_relaxations():
     x_geo_bw_init = np.array([1e3, 1e1, 1e5, 1e2, 1e5, 1e3, 1e-1, 1e1])
     f, gts, eqs, X = blau_wilde(auto_scale=x_geo_bw_init)
-    sp = lh.SignomialProgram(f, [], gts, X)
+    sp = lh.SignomialProgram(f, gts, eqs, X)
     dual1 = sp.dual_relaxation(d=1, sage_mults=True)
     dual1.solve()
     dual2 = sp.dual_relaxation(d=2, sage_mults=True)
@@ -76,5 +76,5 @@ def run_sage_relaxations():
 
 
 if __name__ == '__main__':
-    # sp, d1, d2 = config_2()
-    write_gams_eqform('geo')
+    sp, d1, d2 = run_sage_relaxations()
+    # write_gams_eqform('geo')

@@ -55,7 +55,7 @@ class DegreeTable(object):
                     self.degs[tupa] = di
         pass
 
-    def support(self, g, d):
+    def invsupp(self, g, d):
         deg_g = max([self[a] for a in g.alpha])
         if deg_g > d:
             msg = """
@@ -83,10 +83,6 @@ class DegreeTable(object):
                 supp.append(a)
         supp = np.row_stack(supp)
         return supp
-
-    @staticmethod
-    def extend_basis(A0, A1, max_deg):
-        pass
 
 
 class FinderArray(object):
@@ -168,7 +164,7 @@ class SignomialProgram(object):
         summands = [f_mod]
         ineq_dual_sigs = []
         for i, g in enumerate(gts):
-            s_g_supp = dt.support(g, d)
+            s_g_supp = dt.invsupp(g, d)
             if np.prod(s_g_supp.shape) == 0:
                 msg = SignomialProgram.BAD_DEGREE % (str(i), str(d))
                 warnings.warn(msg)
@@ -179,7 +175,7 @@ class SignomialProgram(object):
             ineq_dual_sigs.append((s_g, g))
         eq_dual_sigs = []
         for i, g in enumerate(eqs):
-            z_g_supp = dt.support(g, d)
+            z_g_supp = dt.invsupp(g, d)
             if np.prod(z_g_supp.shape) == 0:
                 msg = SignomialProgram.BAD_DEGREE % (str(i), str(d))
                 warnings.warn(msg)
