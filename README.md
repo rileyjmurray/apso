@@ -1,5 +1,5 @@
 This repository hosts code associated with the manuscript
-"Algebraic perspectives on signomial optimization" (arXiv:2107.00345).
+"Algebraic perspectives on signomial optimization" ([arXiv:2107.00345](https://arxiv.org/abs/2107.00345)).
 The code includes scripts in Python, Matlab, and Julia, as well
 as a Python package called "apso".
 
