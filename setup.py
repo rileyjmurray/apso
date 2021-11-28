@@ -24,6 +24,5 @@ setuptools.setup(
                       "scipy >= 1.1",
                       "sageopt >= 0.5.3",
                       "matplotlib",
-                      "sympy",
                       "pyomo"],
 )

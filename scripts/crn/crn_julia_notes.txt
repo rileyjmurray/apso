@@ -1,3 +1,8 @@
+This file contains notes that I left myself when running an
+interactive Julia session. I considered removing this file
+from the repo because it is not really presentable. But I
+decided there is no harm in including it.
+-------------------------------------------------------------
 CS options
 	MF (approximately smallest chordal extension)
 	NC (no chordal extension)
